@@ -23,6 +23,18 @@ Sortie attendue:
 */
 
 function getJedisNames(characters) {
-}
+  const result=characters.filter(myJedi=>myJedi.side==='light');
+ return result.map(function(myJediLight){
+   return myJediLight.name;
+ });}
 
+
+console.log(getJedisNames([
+  { name: 'Yoda', side: 'light' },
+  { name: 'Count Dooku', side: 'dark' },
+  { name: 'Obiwan Kenobi', side: 'light' },
+  { name: 'Mace Windu', side: 'light' },
+  { name: 'Darth Sidious', side: 'dark' },
+  { name: 'Darth Maul', side: 'dark' }
+]));
 module.exports = getJedisNames;
